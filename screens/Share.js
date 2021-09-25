@@ -12,7 +12,7 @@ class Contact extends React.Component {
     >
 
           <Button title=' Share Random Quote' buttonStyle={{ backgroundColor: '#7cc'}}
-            icon={<Icon name='envelope-o' type='font-awesome' color='white' />}
+            //icon={<Icon name='envelope-o' type='font-awesome' color='white' />}
             onPress={this.sendMail} />
             </ImageBackground>
     );

@@ -57,9 +57,14 @@ render(){
 
 if(this.state.loading){
   return( 
+    <ImageBackground
+    style={styles.background}
+    source={require("../assets/map.jpg")}
+>
     <View style={styles.loader}> 
       <ActivityIndicator size="large" color="#0c9"/>
     </View>
+    </ImageBackground>
 )}
 return(
   <ImageBackground
