@@ -10,9 +10,9 @@ ImageBackground,
 Image
 } from "react-native";
 
-import aryy from '../assets/jonSnow.jpg';
+import aryy from '../assets/dan.jpg';
 
-export default class Jon extends React.Component {
+export default class Sansa extends React.Component {
 static navigationOptions = ({ navigation }) => {
 return {
   title: "Source Listing",
@@ -28,7 +28,7 @@ constructor(props) {
   };
 }
 componentDidMount(){
-fetch("https://game-of-thrones-quotes.herokuapp.com/v1/character/jon")
+fetch("https://game-of-thrones-quotes.herokuapp.com/v1/character/daenerys")
 .then(response => response.json())
 .then((responseJson)=> {
   this.setState({
@@ -54,23 +54,19 @@ renderItem=(data)=>
 <Text style={styles.lightText}>{data.item.house.name}</Text>
 <Text style={styles.lightText}>{data.item.quotes}</Text></TouchableOpacity>
 render(){
+
 if(this.state.loading){
   return( 
-    <ImageBackground
-        style={styles.background}
-        source={require("../assets/map.jpg")}
-    >
     <View style={styles.loader}> 
       <ActivityIndicator size="large" color="#0c9"/>
     </View>
-    </ImageBackground>
 )}
 return(
   <ImageBackground
-        style={styles.background}
-        source={require("../assets/map.jpg")}
-    >
- <View style={{alignItems:'center'}}>
+  style={styles.background}
+  source={require("../assets/map.jpg")}
+>
+<View style={{alignItems: 'center'}}>
    <Image source={aryy} style={{width: 300,height:390}} />
  <FlatList
     data= {this.state.dataSource}

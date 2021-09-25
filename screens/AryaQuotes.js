@@ -62,7 +62,11 @@ if(this.state.loading){
     </View>
 )}
 return(
- <View style={styles.container}>
+  <ImageBackground
+        style={styles.background}
+        source={require("../assets/map.jpg")}
+    >
+ <View style={{alignItems: 'center'}}>
    <Image source={aryy} style={{width: 300,height:390}} />
  <FlatList
     data= {this.state.dataSource}
@@ -71,6 +75,7 @@ return(
     keyExtractor= {item=>item.id}
  />
 </View>
+</ImageBackground>
 )}
 }
 const styles = StyleSheet.create({

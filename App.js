@@ -11,6 +11,9 @@ import ned from './screens/Ned';
 import Footer from './Footer';
 import Start from './screens/start';
 import Sansa from './screens/sansa';
+import daen from './screens/Dany';
+import shareQuote from './screens/Share';
+import cersei from './screens/Cersei';
 
 import { navigationRef } from './RootNavigation';
 const Stack = createStackNavigator();
@@ -42,6 +45,18 @@ export default function App() {
       <Stack.Screen
         name="Sansa Stark"
         component={Sansa}
+      />
+      <Stack.Screen
+        name="Share Quote"
+        component={shareQuote}
+      />
+      <Stack.Screen
+        name="Daenerys Targaryen"
+        component={daen}
+      />
+      <Stack.Screen
+        name="Cersei Lannister"
+        component={cersei}
       />
     </Stack.Navigator>
     <Footer></Footer>

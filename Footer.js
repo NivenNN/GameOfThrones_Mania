@@ -34,6 +34,25 @@ export default function Footer(props) {
             ><Text>Sansa Stark</Text>
             </TouchableOpacity>
 
+            <TouchableOpacity
+                style={styles.button}
+                onPress={() => RootNavigation.navigate('Daenerys Targaryen')}
+            ><Text>Daenerys Targaryen</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+                style={styles.button}
+                onPress={() => RootNavigation.navigate('Cersei Lannister')}
+            ><Text>Cersei Lannister</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+                style={styles.button}
+                onPress={() => RootNavigation.navigate('Share Quote')}
+            ><Text>Share Quote</Text>
+            </TouchableOpacity>
+            
+
         </View>
     )
 }
